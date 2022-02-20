@@ -113,3 +113,29 @@ GROUP BY Studio
 		,[Year]
 ORDER BY [Year]
 ;	
+
+--TOP GROSS MOVIES
+SELECT TOP 5 *
+FROM HollywoodStories
+ORDER BY [Worldwide_Gross] DESC
+;
+
+--TOP GROSS MOVIES BY DISNEY
+SELECT TOP 5 *
+FROM HollywoodStories
+WHERE Studio = 'Disney'
+ORDER BY [Worldwide_Gross] DESC
+;
+
+--TOP PROFITABILITY MOVIES
+SELECT TOP 5 *
+FROM HollywoodStories
+ORDER BY Profitability DESC
+;
+
+--TOP PROFITABILITY MOVIES BY GENRE ANIMATION
+SELECT TOP 5 *
+FROM HollywoodStories
+WHERE Genre = 'Animation'
+ORDER BY Profitability DESC
+;
